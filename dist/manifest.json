@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bitcoin Browser Wallet",
+  "short_name": "BTC Wallet",
+  "description": "A simple bitcoin wallet for your browser.",
+  "version": "0.2.8",
+  "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "https://blockchain.info/merchant/*/*"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "wallet.html"
+  }
+}
